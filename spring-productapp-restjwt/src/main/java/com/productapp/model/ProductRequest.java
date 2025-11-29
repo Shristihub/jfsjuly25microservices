@@ -18,6 +18,7 @@ public class ProductRequest {
 	private double price;
 	private FeaturesRequest features;
 	private OffersRequest offers;
+	private BrandRequest brand;
 	
 	
 }

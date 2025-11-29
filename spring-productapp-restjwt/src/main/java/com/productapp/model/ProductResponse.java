@@ -18,5 +18,6 @@ public class ProductResponse {
 	private double price;
 	private FeaturesResponse features;
 	private OffersResponse offers;
+	private BrandResponse brand;
 	
 }

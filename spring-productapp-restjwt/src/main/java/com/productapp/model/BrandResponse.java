@@ -15,5 +15,5 @@ public class BrandResponse {
 
 	private String brandName;
 	private Integer brandId;
-	private List<Product> products;
+	private List<ProductResponse> products;
 }
