@@ -1,0 +1,26 @@
+package com.callerservice.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CallerServiceImpl implements ICallerService{
+
+	@Override
+	public String printUserDetails(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String welcomeUserDetails(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String showBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

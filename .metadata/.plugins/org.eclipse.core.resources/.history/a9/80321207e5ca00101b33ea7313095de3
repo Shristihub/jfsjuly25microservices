@@ -1,0 +1,5 @@
+package com.greeterservice.controllers;
+
+public class GreetController {
+
+}

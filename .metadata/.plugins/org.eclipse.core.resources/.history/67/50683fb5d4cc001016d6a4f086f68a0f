@@ -1,0 +1,9 @@
+package com.callerservice.service;
+
+import org.springframework.web.bind.annotation.PathVariable;
+
+public interface ICallerService {
+	String getUserDetails(String username);
+	String welcomeUser(String username);
+	String showBooks();
+}

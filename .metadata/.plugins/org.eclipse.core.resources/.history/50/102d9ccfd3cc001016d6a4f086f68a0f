@@ -1,0 +1,5 @@
+package com.callerservice.config;
+
+public class WebConfig {
+
+}

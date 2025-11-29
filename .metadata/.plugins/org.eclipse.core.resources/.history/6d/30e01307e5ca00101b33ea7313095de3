@@ -1,0 +1,13 @@
+package com.greeterservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EurekaGreetServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EurekaGreetServiceApplication.class, args);
+	}
+
+}
