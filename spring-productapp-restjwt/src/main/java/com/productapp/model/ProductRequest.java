@@ -17,5 +17,7 @@ public class ProductRequest {
 	private Integer productId;
 	private double price;
 	private FeaturesRequest features;
+	private OffersRequest offers;
+	
 	
 }

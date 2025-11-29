@@ -11,12 +11,18 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class ProductResponse {
+public class OffersResponse {
+	private OffersType offersType; //cashback, bankoffer, partneroffer
+	private Integer offersId;
+	private String description;
 
-	private String productName;
-	private Integer productId;
-	private double price;
-	private FeaturesResponse features;
-	private OffersResponse offers;
-	
 }
+
+
+
+
+
+
+
+
+

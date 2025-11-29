@@ -1,11 +1,15 @@
 package com.productapp.model;
 
+import java.util.List;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import lombok.AllArgsConstructor;
@@ -29,10 +33,19 @@ public class Product {
 	private Integer productId;
 	private double price;
 	
-	//ave features before saving product entity
+	//save features before saving product entity
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "features_id") // to give a diff
 	private Features features;
+	
+	//save features before saving product entity
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="product_id")
+	private List<Offers> offers;
+	
+	@ManyToOne
+	private Brand brand;
+	
 	
 	
 	
