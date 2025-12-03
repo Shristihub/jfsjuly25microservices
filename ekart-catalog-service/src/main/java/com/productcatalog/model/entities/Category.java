@@ -19,7 +19,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @Entity
-@ToString
+@ToString(exclude = "products")
 public class Category {
 
 	

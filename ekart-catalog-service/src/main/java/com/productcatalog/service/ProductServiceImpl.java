@@ -53,6 +53,7 @@ public class ProductServiceImpl implements IProductService {
 	@Override
 	public List<ProductResponse> getAll() {
 		List<Product> products = productRepository.findAll();
+		System.out.println(products);
 		return products.stream().map(product -> mapper.toProductResponse(product))
 				.collect(Collectors.toList());
 	}

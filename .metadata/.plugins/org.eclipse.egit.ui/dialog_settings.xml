@@ -5,4 +5,6 @@
 		<item value="github.com"/>
 		<item value="bitbucket.org"/>
 	</list>
+	<section name="FetchGerritChangePage">
+	</section>
 </section>

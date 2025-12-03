@@ -19,8 +19,8 @@ public class WebConfig {
 	}
 	@Bean
 	@LoadBalanced
-	RestClient restClient() {
-		return RestClient.builder()
-				.build();
+	RestClient.Builder restClientBuilder() {
+		return RestClient.builder();
+				
 	}
 }

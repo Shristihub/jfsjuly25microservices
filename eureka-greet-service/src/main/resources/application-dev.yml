@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: greet-service
+server:
+  port: 8089
+  
+eureka:
+   client:
+    service-url:
+      default-zone: http://localhost:8761
+
+message: "This is for devv profile"

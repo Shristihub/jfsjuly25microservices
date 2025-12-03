@@ -11,9 +11,14 @@ import org.springframework.web.client.RestClient;
 @Service
 public class CallerServiceRestClientImpl implements ICallerService{
 	
-	@Autowired
+	
 	private RestClient restClient;
 	
+	//instead of RestClientBuilder you can use builder also
+	public CallerServiceRestClientImpl(RestClient.Builder builder ) {
+		super();
+		this.restClient = builder.build();
+	}
 
 	//call printdetails
 	@Override
@@ -21,7 +26,7 @@ public class CallerServiceRestClientImpl implements ICallerService{
 //		http://localhost:8081/greeter/print/userdetails?username=Priya&city=Chennai
 	 return	restClient
 		 .get()
-		 .uri("http://localhost:8081/greeter/print/userdetails?username={username}", name)
+		 .uri("http://greet-service/greeter/print/userdetails?username={username}", name)
 		 .retrieve()
 		 .body(String.class);
 
@@ -41,7 +46,7 @@ public class CallerServiceRestClientImpl implements ICallerService{
 //		
 		String userDetails = restClient
 				 .get()
-				 .uri("http://localhost:8081/greeter/username/{username}",name)
+				 .uri("http://greet-service/greeter/username/{username}",name)
 				 .retrieve()
 				 .body(String.class);
 			return userDetails;
