@@ -19,7 +19,7 @@ public class ProductResponse {
 	private Integer productId;
 	private double price;
 	private FeaturesResponse features;
-	private OffersResponse offers;
+	private List<OffersResponse> offers;
 	private BrandResponse brand;
 	private List<CategoryResponse> categories;
 	private List<String> paymentModes; // COD,UPI,CREDITCARD,DEBITCARD

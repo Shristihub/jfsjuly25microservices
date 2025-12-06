@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8084
 
 
 spring:
@@ -23,3 +23,6 @@ spring:
 
 message: Goodbye   
   #http://localhost:8888/product-catalog.yml   
+
+
+

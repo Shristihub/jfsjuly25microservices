@@ -26,16 +26,20 @@ public class ProductInfoController {
 	ResponseEntity<List<Product>> viewAllProducts(){
 		return ResponseEntity.ok(infoService.getAllProducts());
 	}
+	@GetMapping("/product-info/productId/{productId}")
+	ResponseEntity<Product> viewProductById(@PathVariable int productId) {
+		return ResponseEntity.ok(infoService.getById(productId));
+	}
 	@GetMapping("/product-info/brand/{brand}")
 	ResponseEntity<List<Product>> viewProductsByBrand(@PathVariable String brand) {
 		return ResponseEntity.ok(infoService.getProductsByBrand(brand));
 	}
 	@GetMapping("/product-info/category/{category}")
 	ResponseEntity<List<Product>> viewProductsByCategory(@PathVariable String category) {
-		return null;
+		return ResponseEntity.ok(infoService.getProductsByCategory(category));
 	}
 	@GetMapping("/product-info/category/{category}/price/{price}")
 	ResponseEntity<List<Product>> viewProductsByCatLessPrice(@PathVariable String category, @PathVariable double price) {
-		return null;
+		return ResponseEntity.ok(infoService.getProductsByCatLessPrice(category, price));
 }
 }

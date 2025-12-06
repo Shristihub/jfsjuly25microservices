@@ -1,6 +1,0 @@
-package com.greeterservice.controllers;
-
-@Rest
-public class GreetController {
-
-}

@@ -10,5 +10,6 @@ public interface IProductInfoService {
 	List<Product> getProductsByBrand(String brand);
 	List<Product> getProductsByCategory(String category);
 	List<Product> getProductsByCatLessPrice(String category, double price);
+	Product getById(int productId);
 
 }

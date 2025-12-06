@@ -11,7 +11,7 @@ import org.springframework.web.client.RestClient;
 import com.productinfo.model.Product;
 
 
-@Service
+//@Service
 public class ProductInfoServiceImpl implements IProductInfoService{
 	
 	private final String BASEURL= "http://product-catalog/catalog-service/v1/products";
@@ -30,6 +30,15 @@ public class ProductInfoServiceImpl implements IProductInfoService{
 		   .toEntity(new ParameterizedTypeReference<>() {});
 		return responseEntity.getBody();
 	}
+	
+//    http://localhost:8081/catalog-service/v1/products/productId/1
+    public Product getById(int productId) {
+    	return restClient
+				   .get()
+				   .uri(BASEURL.concat("/productId/{productId}"),productId)
+				   .retrieve()
+				   .body(Product.class);
+}
 
 	@Override
 	public List<Product> getProductsByBrand(String brand) {
@@ -44,14 +53,23 @@ public class ProductInfoServiceImpl implements IProductInfoService{
 
 	@Override
 	public List<Product> getProductsByCategory(String category) {
-		// TODO Auto-generated method stub
-		return null;
+//		 http://localhost:8081/catalog-service/v1/products/category?category=electronics
+		return restClient
+				   .get()
+				   .uri(BASEURL.concat("/category?category={category}"),category)
+				   .retrieve()
+				   .body(new ParameterizedTypeReference<>() {});
 	}
 
 	@Override
 	public List<Product> getProductsByCatLessPrice(String category, double price) {
-		// TODO Auto-generated method stub
-		return null;
+//		http://localhost:8081/catalog-service/v1/products/category/Electronics/price/20000
+		ResponseEntity<List<Product>> responseEntity =  restClient
+		 .get().uri(BASEURL
+		  .concat("http://localhost:8081/catalog-service/v1/products/category/{category}/price/{price}"),category,price)
+		 .retrieve()
+				   .toEntity(new ParameterizedTypeReference<>() {});
+				return responseEntity.getBody();
 	}
 
 }

@@ -19,7 +19,7 @@ public class Product {
 	private Integer productId;
 	private double price;
 	private Features features;
-	private Offers offers;
+	private List<Offers> offers;
 	private Brand brand;
 	private List<Category> categories;
 	private List<String> paymentModes; // COD,UPI,CREDITCARD,DEBITCARD
