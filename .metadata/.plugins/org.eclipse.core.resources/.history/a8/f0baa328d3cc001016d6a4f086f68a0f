@@ -1,5 +1,0 @@
-package com.callerservice.service;
-
-public interface ICallerService {
-
-}

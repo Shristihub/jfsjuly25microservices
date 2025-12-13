@@ -24,5 +24,7 @@ public class ProductRequest {
 	private List<CategoryRequest> categories;
 	private List<String> paymentModes; // COD,UPI,CREDITCARD,DEBITCARD
 	private List<String> deliveryTypes; // standard, prime,free
+	
+	private int stock; // this is for inventoryservice
 
 }

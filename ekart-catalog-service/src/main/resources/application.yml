@@ -1,5 +1,5 @@
 server:
-  port: 8084
+  port: 8081
 
 
 spring:
@@ -23,6 +23,19 @@ spring:
 
 message: Goodbye   
   #http://localhost:8888/product-catalog.yml   
+
+management:
+  endpoints:
+    web:
+      base-path: /my-actuator
+      exposure:
+        include: '*'
+        exclude: beans, env
+  endpoint:
+    health:
+      show-details: always
+
+
 
 
 

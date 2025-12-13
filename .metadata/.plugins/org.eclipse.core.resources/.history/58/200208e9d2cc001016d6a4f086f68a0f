@@ -1,9 +1,0 @@
-package com.greeterservice;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class CallerController {
-
-	
-}

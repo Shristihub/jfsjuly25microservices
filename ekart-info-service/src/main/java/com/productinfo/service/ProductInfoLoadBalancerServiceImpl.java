@@ -15,7 +15,7 @@ import org.springframework.web.client.RestClient;
 import com.productinfo.model.Product;
 
 
-@Service
+//@Service
 public class ProductInfoLoadBalancerServiceImpl implements IProductInfoService{
 	
 	private final String BASEURL= "http://product-catalog/catalog-service/v1/products";

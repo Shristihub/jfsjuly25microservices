@@ -1,0 +1,16 @@
+server:
+  port: 8083
+
+
+spring:
+ application:
+  name: product-inventory
+ config:
+   import: configserver:http://localhost:8888
+
+
+  
+  #http://localhost:8888/product-inventory.yml   
+
+
+
